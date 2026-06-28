@@ -3,7 +3,7 @@
  * @description a dark glass Discord theme by AstrlZoom.
  * @author AstrlZoom
  * @version 1.0.0
- * @source https://github.com/AstrlZoom/MyDiscordTheme
+ * @source https://github.com/AstrlZoom/AstrlsThemes
 */
 
 /*
@@ -14,7 +14,7 @@
  */
 
 /* Import the generated module CSS from this public GitHub repo. */
-@import url('https://raw.githubusercontent.com/AstrlZoom/MyDiscordTheme/main/build/AstrlGlass.css');
+@import url('https://raw.githubusercontent.com/AstrlZoom/AstrlsThemes/main/build/AstrlGlass.css');
 
 body {
     /* font options */

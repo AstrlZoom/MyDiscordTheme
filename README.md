@@ -9,7 +9,7 @@ Download `themes/AstrlGlass Theme.theme.css` and place it in your Vencord or Bet
 Direct download:
 
 ```text
-https://raw.githubusercontent.com/AstrlZoom/MyDiscordTheme/main/themes/AstrlGlass%20Theme.theme.css
+https://raw.githubusercontent.com/AstrlZoom/AstrlsThemes/main/themes/AstrlGlass%20Theme.theme.css
 ```
 
 Enable `AstrlGlass Theme.theme.css` in Discord, then press `Ctrl+R` if Discord does not refresh right away.

@@ -11,7 +11,7 @@ module.exports = {
     distFile: 'dist/AstrlGlass Theme.theme.css',
     // Must exactly match the @import line in the base theme file.
     buildImport:
-        "@import url('https://raw.githubusercontent.com/AstrlZoom/MyDiscordTheme/main/build/AstrlGlass.css');",
+        "@import url('https://raw.githubusercontent.com/AstrlZoom/AstrlsThemes/main/build/AstrlGlass.css');",
     displayName: 'AstrlGlass',
     // Source order matters. Earlier files set basics; later files can override them.
     sourceFiles: [
