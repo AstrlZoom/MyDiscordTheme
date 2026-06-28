@@ -2,7 +2,6 @@
 
 body {
     --list-item-transition: 0.2s ease; /* transition for list items */
-    --dms-icon-svg-transition: 0.95s; /* how long the DMs icon bounce takes */
 }
 
 @property --animations {

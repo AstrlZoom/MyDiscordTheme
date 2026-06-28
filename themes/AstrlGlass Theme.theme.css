@@ -24,18 +24,15 @@ body {
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
+    --radius-sm: 6px; /* small corners, like small buttons and tags */
+    --radius-md: 8px; /* medium corners, like buttons and embeds */
+    --radius-lg: 12px; /* big panel corners */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
     --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
 
     /* animation/transition options */
     --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
     --list-item-transition: 0.2s ease; /* transition for list items */
-    --dms-icon-svg-transition: 0.95s; /* DMs icon bounce speed. Higher = slower */
-    --dms-icon-bounce-up: -8px; /* DMs hover bounce height. More negative = jumps higher */
-    --dms-icon-bounce-down: 3px; /* DMs hover dip after jumping. Higher = more dramatic */
-    --dms-icon-bounce-settle: -2px; /* DMs final small hop before it returns to normal */
-    --dms-icon-click-up: -6px; /* DMs click bounce height */
-    --dms-icon-click-down: 2px; /* DMs click dip after jumping */
     --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
 
     /* top bar options */

@@ -557,7 +557,6 @@ body {
 
 body {
     --list-item-transition: 0.2s ease; /* transition for list items */
-    --dms-icon-svg-transition: 0.95s; /* how long the DMs icon bounce takes */
 }
 
 @property --animations {
@@ -751,7 +750,7 @@ body {
 }
 
 /* colors.css */
-/* AstrlGlass color tokens. Most color edits should happen in themes/AstrlGlass.theme.css. */
+/* AstrlGlass color tokens. Most color edits should happen in themes/AstrlGlass Theme.theme.css. */
 
 @property --colors {
     syntax: 'off | on';
@@ -1810,7 +1809,7 @@ body {
 }
 
 /* dms-button.css */
-/* Custom DMs/home icon, SVG mask, bounce animation, and shrink prevention. */
+/* Custom DMs/home icon, SVG mask, fixed bounce animation, and shrink prevention. */
 
 body {
     /* DMs/home button icon. Replace this URL if you want a different SVG icon. */
@@ -1818,11 +1817,6 @@ body {
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
     --dms-icon-color-before: var(--icon-subtle); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
-    --dms-icon-bounce-up: -8px; /* negative number = moves up higher */
-    --dms-icon-bounce-down: 3px; /* positive number = dips down before settling */
-    --dms-icon-bounce-settle: -2px; /* small final hop before returning to normal */
-    --dms-icon-click-up: -6px; /* click bounce height */
-    --dms-icon-click-down: 2px; /* click dip amount */
     --dms-background-image-url: url(''); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
     --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
@@ -1869,10 +1863,10 @@ body {
             transition: background-color 0.15s ease-out;
         }
         .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover > .childWrapper__6e9f8::before {
-            animation: dms-icon-hop var(--dms-icon-svg-transition) cubic-bezier(0.2, 0.7, 0.22, 1);
+            animation: dms-icon-hop 0.95s cubic-bezier(0.2, 0.7, 0.22, 1);
         }
         .wrapper__6e9f8[data-list-item-id='guildsnav___home']:active > .childWrapper__6e9f8::before {
-            animation: dms-icon-hop-click var(--dms-icon-svg-transition) cubic-bezier(0.2, 0.7, 0.22, 1);
+            animation: dms-icon-hop-click 0.95s cubic-bezier(0.2, 0.7, 0.22, 1);
         }
     }
 }
@@ -1883,16 +1877,16 @@ body {
         translate: 0 0;
     }
     34% {
-        translate: 0 var(--dms-icon-bounce-up);
+        translate: 0 -8px;
     }
     62% {
-        translate: 0 var(--dms-icon-bounce-down);
+        translate: 0 3px;
     }
     80% {
-        translate: 0 var(--dms-icon-bounce-settle);
+        translate: 0 -2px;
     }
     92% {
-        translate: 0 calc(var(--dms-icon-bounce-down) / 2);
+        translate: 0 1.5px;
     }
 }
 
@@ -1902,10 +1896,10 @@ body {
         translate: 0 0;
     }
     40% {
-        translate: 0 var(--dms-icon-click-up);
+        translate: 0 -6px;
     }
     72% {
-        translate: 0 var(--dms-icon-click-down);
+        translate: 0 2px;
     }
 }
 
@@ -2034,11 +2028,11 @@ body {
 
     @container body style(--animations: on) {
         [data-list-item-id='guildsnav___home']:hover > [class*='childWrapper']::before {
-            animation: dms-icon-hop var(--dms-icon-svg-transition) cubic-bezier(0.2, 0.7, 0.22, 1);
+            animation: dms-icon-hop 0.95s cubic-bezier(0.2, 0.7, 0.22, 1);
         }
 
         [data-list-item-id='guildsnav___home']:active > [class*='childWrapper']::before {
-            animation: dms-icon-hop-click var(--dms-icon-svg-transition) cubic-bezier(0.2, 0.7, 0.22, 1);
+            animation: dms-icon-hop-click 0.95s cubic-bezier(0.2, 0.7, 0.22, 1);
         }
     }
 }
@@ -2537,7 +2531,7 @@ body {
  * Desktop transparency support.
  * This only matters if Vencord/BetterDiscord/your client allows the Discord
  * window itself to be transparent. The tint and blur amounts are edited in
- * themes/AstrlGlass.theme.css.
+ * themes/AstrlGlass Theme.theme.css.
  */
 
 html,
