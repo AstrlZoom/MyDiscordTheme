@@ -5363,3 +5363,42 @@ body,
     background-color: transparent !important;
 }
 
+/* Keep transparent mode readable when hovering servers, channels, and popouts. */
+#app-mount .tooltip_c36707,
+#app-mount .tooltipBlack_c36707,
+#app-mount .tooltipGrey_c36707,
+#app-mount .menu_c1e9c4,
+#app-mount .contentWrapper__08434,
+#app-mount .container__55c99,
+#app-mount .messagesPopoutWrap_e8b59c,
+#app-mount .popout__76f04,
+#app-mount .outer_c0bea0.user-profile-popout:not(.custom-theme-background) {
+    background: var(--bg-floating) !important;
+    color: var(--text-1) !important;
+    border: 1px solid var(--border) !important;
+    backdrop-filter: blur(var(--desktop-blur-amount)) saturate(1.08);
+}
+
+#app-mount .tooltipPointer_c36707 {
+    border-top-color: var(--bg-floating) !important;
+}
+
+#app-mount .wrapper__2ea32:hover .link__2ea32,
+#app-mount .channel__972a0:hover,
+#app-mount .interactive__972a0:hover,
+#app-mount .side_aa8da2 .item_aa8da2:hover {
+    background: var(--hover) !important;
+}
+
+#app-mount .wrapper__2ea32.modeSelected__2ea32 .link__2ea32,
+#app-mount .interactive__972a0.interactiveSelected__972a0,
+#app-mount .side_aa8da2 .selected_aa8da2 {
+    background: var(--active) !important;
+}
+
+#app-mount .guilds__5e434,
+#app-mount .sidebarList__5e434,
+#app-mount .panels__5e434 {
+    background-color: var(--bg-4) !important;
+}
+

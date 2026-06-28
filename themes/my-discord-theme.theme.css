@@ -70,9 +70,9 @@ body {
     --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
     --panel-blur: on; /* off: no changes, on: blur the background of panels */
     --blur-amount: 18px; /* amount of blur */
-    --desktop-tint: hsla(220, 18%, 7%, 0.34); /* dark glass layer over the desktop */
+    --desktop-tint: hsla(220, 18%, 7%, 0.28); /* dark glass layer over only the desktop/background */
     --desktop-blur-amount: 22px; /* blur applied to the transparent app background */
-    --bg-floating: hsla(220, 15%, 10%, 0.72); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+    --bg-floating: hsla(220, 15%, 8%, 0.92); /* tooltips, menus, and popouts. Higher alpha = easier to read */
 
     /* chatbar options */
     --custom-chatbar: off; /* off: default chatbar, separated: chatbar separated from chat */
@@ -104,14 +104,14 @@ body {
     --text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: hsla(220, 15%, 20%, 0.7); /* dark buttons when clicked */
-    --bg-2: hsla(220, 15%, 16%, 0.6); /* dark buttons */
-    --bg-3: hsla(220, 15%, 13%, 0.5); /* spacing, secondary elements */
-    --bg-4: hsla(220, 15%, 10%, 0.4); /* main background color */
-    --hover: hsla(221, 19%, 40%, 0.14); /* channels and buttons when hovered */
-    --active: hsla(220, 19%, 40%, 0.22); /* channels and buttons when clicked or selected */
-    --active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */
-    --message-hover: hsla(220, 0%, 0%, 0.12); /* messages when hovered */
+    --bg-1: hsla(220, 15%, 20%, 0.9); /* dark buttons when clicked */
+    --bg-2: hsla(220, 15%, 16%, 0.84); /* dark buttons */
+    --bg-3: hsla(220, 15%, 13%, 0.78); /* panels and secondary surfaces */
+    --bg-4: hsla(220, 15%, 10%, 0.72); /* main panel background. Lower alpha = more see-through */
+    --hover: hsla(221, 19%, 40%, 0.26); /* channels and buttons when hovered */
+    --active: hsla(220, 19%, 40%, 0.36); /* channels and buttons when clicked or selected */
+    --active-2: hsla(220, 19%, 40%, 0.46); /* extra state for transparent buttons */
+    --message-hover: hsla(220, 0%, 0%, 0.22); /* messages when hovered */
 
     /* accent colors */
     --accent-1: var(--blue-1); /* links and other accent text */
