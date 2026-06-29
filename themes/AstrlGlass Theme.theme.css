@@ -42,8 +42,15 @@ body {
     --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
 
     /* window controls */
-    --custom-window-controls: on; /* off: default window controls, on: custom window controls */
+    --custom-window-controls: pastel; /* normal/off: default Discord buttons, pastel/on: sharp colored dots, icons/custom: colored dots with symbols */
     --window-control-size: 14px; /* size of custom window controls */
+    --window-control-minimize-color: #ffd166; /* minimize button color */
+    --window-control-maximize-color: #73e6a9; /* maximize button color */
+    --window-control-close-color: #ff6b7a; /* close button color */
+    --window-control-symbol-color: rgba(5, 47, 95, 0.9); /* icon color when using icons/custom mode */
+    --window-control-minimize-icon: '\2212'; /* minimize icon when using icons/custom mode */
+    --window-control-maximize-icon: '\25a1'; /* maximize icon when using icons/custom mode */
+    --window-control-close-icon: '\00d7'; /* close icon when using icons/custom mode */
 
     /* dms button options */
     --custom-dms-icon: custom; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */

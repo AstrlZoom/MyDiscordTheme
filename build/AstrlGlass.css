@@ -2537,11 +2537,23 @@ body {
 }
 
 /* window-controls.css */
-/* Custom Windows titlebar buttons. Disable with --custom-window-controls. */
+/* Custom Windows titlebar buttons. Choose normal, pastel, or icons with --custom-window-controls. */
 
 body {
     --window-control-size: 14px;
     --window-controls-padding: calc(var(--gap) - (var(--window-control-size) / 2) + 1px);
+    --window-control-radius: 50%;
+    --window-control-minimize-color: #ffd166;
+    --window-control-maximize-color: #73e6a9;
+    --window-control-close-color: #ff6b7a;
+    --window-control-symbol-color: rgba(5, 47, 95, 0.9);
+    --window-control-minimize-icon: '\2212';
+    --window-control-maximize-icon: '\25a1';
+    --window-control-close-icon: '\00d7';
+    --window-control-shadow:
+        0 0 0 1px rgba(255, 241, 232, 0.34),
+        inset 0 1px 1px rgba(255, 255, 255, 0.5),
+        0 2px 8px rgba(0, 18, 38, 0.18);
 }
 
 .winButtons_c38106 {
@@ -2549,9 +2561,53 @@ body {
 }
 
 @property --custom-window-controls {
-    syntax: 'off | on';
+    syntax: 'off | normal | pastel | icons | custom | on';
     inherits: false;
-    initial-value: on;
+    initial-value: pastel;
+}
+
+@container body style(--custom-window-controls: pastel) {
+    .winButtons_c38106 {
+        gap: 0;
+    }
+    .winButton_c38106 > svg {
+        display: none;
+    }
+    .winButton_c38106 {
+        background: none !important;
+        width: calc(var(--window-control-size) * 2);
+        height: var(--custom-app-top-bar-height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .winButton_c38106::after {
+        display: block;
+        content: '';
+        height: var(--window-control-size);
+        width: var(--window-control-size);
+        border-radius: var(--window-control-radius);
+        box-shadow: var(--window-control-shadow);
+        transition:
+            filter 0.12s ease,
+            transform 0.12s ease;
+    }
+    .winButton_c38106:hover::after {
+        filter: saturate(1.2) brightness(1.08);
+    }
+    .winButton_c38106:active::after {
+        transform: scale(0.92);
+        filter: saturate(1.25) brightness(0.96);
+    }
+    .winButtonClose_c38106::after {
+        background-color: var(--window-control-close-color) !important;
+    }
+    .winButtonMinMax_c38106:nth-child(1)::after {
+        background-color: var(--window-control-minimize-color) !important;
+    }
+    .winButtonMinMax_c38106:nth-child(2)::after {
+        background-color: var(--window-control-maximize-color) !important;
+    }
 }
 
 @container body style(--custom-window-controls: on) {
@@ -2565,32 +2621,200 @@ body {
         background: none !important;
         width: calc(var(--window-control-size) * 2);
         height: var(--custom-app-top-bar-height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .winButton_c38106::after {
         display: block;
         content: '';
         height: var(--window-control-size);
         width: var(--window-control-size);
-        border-radius: 50%;
+        border-radius: var(--window-control-radius);
+        box-shadow: var(--window-control-shadow);
+        transition:
+            filter 0.12s ease,
+            transform 0.12s ease;
     }
     .winButton_c38106:hover::after {
-        filter: brightness(0.7);
+        filter: saturate(1.2) brightness(1.08);
     }
     .winButton_c38106:active::after {
-        transform: scale(0.9);
+        transform: scale(0.92);
+        filter: saturate(1.25) brightness(0.96);
     }
     .winButtonClose_c38106::after {
-        background-color: var(--dnd) !important;
+        background-color: var(--window-control-close-color) !important;
     }
     .winButtonMinMax_c38106:nth-child(1)::after {
-        background-color: var(--idle) !important;
+        background-color: var(--window-control-minimize-color) !important;
     }
     .winButtonMinMax_c38106:nth-child(2)::after {
-        background-color: var(--online) !important;
+        background-color: var(--window-control-maximize-color) !important;
+    }
+}
+
+@container body style(--custom-window-controls: icons) {
+    .winButtons_c38106 {
+        gap: 0;
+    }
+    .winButton_c38106 > svg {
+        display: none;
+    }
+    .winButton_c38106 {
+        position: relative;
+        background: none !important;
+        width: calc(var(--window-control-size) * 2);
+        height: var(--custom-app-top-bar-height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .winButton_c38106::after {
+        display: block;
+        content: '';
+        height: var(--window-control-size);
+        width: var(--window-control-size);
+        border-radius: var(--window-control-radius);
+        box-shadow: var(--window-control-shadow);
+        transition:
+            filter 0.12s ease,
+            transform 0.12s ease;
+    }
+    .winButton_c38106::before {
+        position: absolute;
+        z-index: 1;
+        width: var(--window-control-size);
+        height: var(--window-control-size);
+        color: var(--window-control-symbol-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        font-weight: 800;
+        line-height: 1;
+        opacity: 0.82;
+        pointer-events: none;
+    }
+    .winButton_c38106:hover::after {
+        filter: saturate(1.2) brightness(1.08);
+    }
+    .winButton_c38106:active::after {
+        transform: scale(0.92);
+        filter: saturate(1.25) brightness(0.96);
+    }
+    .winButtonClose_c38106::after {
+        background-color: var(--window-control-close-color) !important;
+    }
+    .winButtonClose_c38106::before {
+        content: var(--window-control-close-icon);
+        font-size: calc(var(--window-control-size) * 0.9);
+        transform: translateY(-0.5px);
+    }
+    .winButtonMinMax_c38106:nth-child(1)::after {
+        background-color: var(--window-control-minimize-color) !important;
+    }
+    .winButtonMinMax_c38106:nth-child(1)::before {
+        content: var(--window-control-minimize-icon);
+        font-size: calc(var(--window-control-size) * 0.82);
+        transform: translateY(-1px);
+    }
+    .winButtonMinMax_c38106:nth-child(2)::after {
+        background-color: var(--window-control-maximize-color) !important;
+    }
+    .winButtonMinMax_c38106:nth-child(2)::before {
+        content: var(--window-control-maximize-icon);
+        font-size: calc(var(--window-control-size) * 0.55);
+        transform: translateY(-0.5px);
+    }
+}
+
+@container body style(--custom-window-controls: custom) {
+    .winButtons_c38106 {
+        gap: 0;
+    }
+    .winButton_c38106 > svg {
+        display: none;
+    }
+    .winButton_c38106 {
+        position: relative;
+        background: none !important;
+        width: calc(var(--window-control-size) * 2);
+        height: var(--custom-app-top-bar-height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .winButton_c38106::after {
+        display: block;
+        content: '';
+        height: var(--window-control-size);
+        width: var(--window-control-size);
+        border-radius: var(--window-control-radius);
+        box-shadow: var(--window-control-shadow);
+        transition:
+            filter 0.12s ease,
+            transform 0.12s ease;
+    }
+    .winButton_c38106::before {
+        position: absolute;
+        z-index: 1;
+        width: var(--window-control-size);
+        height: var(--window-control-size);
+        color: var(--window-control-symbol-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        font-weight: 800;
+        line-height: 1;
+        opacity: 0.82;
+        pointer-events: none;
+    }
+    .winButton_c38106:hover::after {
+        filter: saturate(1.2) brightness(1.08);
+    }
+    .winButton_c38106:active::after {
+        transform: scale(0.92);
+        filter: saturate(1.25) brightness(0.96);
+    }
+    .winButtonClose_c38106::after {
+        background-color: var(--window-control-close-color) !important;
+    }
+    .winButtonClose_c38106::before {
+        content: var(--window-control-close-icon);
+        font-size: calc(var(--window-control-size) * 0.9);
+        transform: translateY(-0.5px);
+    }
+    .winButtonMinMax_c38106:nth-child(1)::after {
+        background-color: var(--window-control-minimize-color) !important;
+    }
+    .winButtonMinMax_c38106:nth-child(1)::before {
+        content: var(--window-control-minimize-icon);
+        font-size: calc(var(--window-control-size) * 0.82);
+        transform: translateY(-1px);
+    }
+    .winButtonMinMax_c38106:nth-child(2)::after {
+        background-color: var(--window-control-maximize-color) !important;
+    }
+    .winButtonMinMax_c38106:nth-child(2)::before {
+        content: var(--window-control-maximize-icon);
+        font-size: calc(var(--window-control-size) * 0.55);
+        transform: translateY(-0.5px);
     }
 }
 
 @container body style(--custom-window-controls: off) and style(--top-bar-button-position: titlebar) {
+    .winButton_c38106 {
+        width: calc(var(--window-control-size) * 2);
+        height: calc(var(--window-control-size) * 2);
+    }
+    .winButtons_c38106 {
+        gap: 0;
+    }
+}
+
+@container body style(--custom-window-controls: normal) and style(--top-bar-button-position: titlebar) {
     .winButton_c38106 {
         width: calc(var(--window-control-size) * 2);
         height: calc(var(--window-control-size) * 2);
