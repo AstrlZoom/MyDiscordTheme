@@ -80,9 +80,9 @@ body {
     --liquid-glass-shine-opacity: 0.18; /* top-left milky shine strength */
     --liquid-glass-edge-opacity: 0.32; /* soft bright edge strength */
     --liquid-glass-shadow-opacity: 0.3; /* soft shadow depth behind panels */
-    --desktop-tint: linear-gradient(135deg, rgba(255, 241, 232, 0.08), rgba(240, 183, 179, 0.16) 45%, rgba(0, 83, 119, 0.22)); /* cream, powder bush, and blue glass layer over the desktop/background */
+    --desktop-tint: linear-gradient(135deg, rgba(255, 241, 232, 0.22), rgba(240, 183, 179, 0.16) 46%, rgba(0, 83, 119, 0.1)); /* cream-first glass layer over the desktop/background */
     --desktop-blur-amount: 22px; /* blur applied to the transparent app background */
-    --bg-floating: rgba(5, 47, 95, 0.94); /* tooltips, menus, and popouts. Higher alpha = easier to read */
+    --bg-floating: rgba(255, 241, 232, 0.94); /* tooltips, menus, and popouts. Higher alpha = easier to read */
 
     /* chatbar options */
     --custom-chatbar: off; /* off: default chatbar, separated: chatbar separated from chat */
@@ -106,21 +106,21 @@ body {
 
     /* text colors */
     --text-0: var(--astrl-navy); /* text on bright colored elements */
-    --text-1: var(--astrl-cream); /* normally white text */
-    --text-2: #f4d8d2; /* headings and important text */
-    --text-3: #d7b9ba; /* normal text */
-    --text-4: #83a7b7; /* icon buttons and channels */
-    --text-5: #5a7484; /* muted channels/chats and timestamps */
+    --text-1: #052f5f; /* strongest text on cream panels */
+    --text-2: #17425f; /* headings and important text */
+    --text-3: #365f70; /* normal text */
+    --text-4: #65808b; /* icon buttons and channels */
+    --text-5: #91a0a3; /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: rgba(13, 76, 111, 0.92); /* dark buttons when clicked */
-    --bg-2: rgba(8, 62, 99, 0.86); /* dark buttons */
-    --bg-3: rgba(6, 48, 84, 0.8); /* panels and secondary surfaces */
-    --bg-4: rgba(5, 47, 95, 0.74); /* main blue glass background. Lower alpha = more see-through */
-    --hover: rgba(240, 183, 179, 0.16); /* channels and buttons when hovered */
-    --active: rgba(0, 83, 119, 0.42); /* channels and buttons when clicked or selected */
-    --active-2: rgba(216, 17, 89, 0.24); /* extra state for transparent buttons */
-    --message-hover: rgba(240, 183, 179, 0.09); /* messages when hovered */
+    --bg-1: rgba(0, 83, 119, 0.26); /* buttons when clicked */
+    --bg-2: rgba(240, 183, 179, 0.42); /* buttons and controls */
+    --bg-3: rgba(250, 222, 210, 0.74); /* panels and secondary surfaces */
+    --bg-4: rgba(255, 241, 232, 0.78); /* main cream glass background. Lower alpha = more see-through */
+    --hover: rgba(0, 83, 119, 0.1); /* channels and buttons when hovered */
+    --active: rgba(0, 83, 119, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: rgba(216, 17, 89, 0.16); /* extra state for transparent buttons */
+    --message-hover: rgba(5, 47, 95, 0.07); /* messages when hovered */
 
     /* accent colors */
     --accent-1: var(--blue-1); /* links and other accent text */
