@@ -46,11 +46,11 @@ body {
     --liquid-glass-edge-opacity: 0.24;
     --liquid-glass-shadow-opacity: 0.22;
 
-    /* pastel glow defaults. The public theme file turns this on. */
+    /* pastel text glow defaults. The public theme file turns this on. */
     --pastel-glow: off;
-    --pastel-glow-opacity: 0.16;
+    --pastel-glow-opacity: 0.22;
     --pastel-glow-size: 4px;
-    --pastel-icon-glow-size: 3px;
+    --pastel-glow-duration: 9s;
 }
 
 @container body style(--pastel-glow: on) {
@@ -63,18 +63,35 @@ body {
             0 0 calc(var(--pastel-glow-size) * 0.65) var(--pastel-rainbow-blue),
             1px 1px var(--pastel-glow-size) var(--pastel-rainbow-pink),
             -1px 1px var(--pastel-glow-size) var(--pastel-rainbow-cream);
-        --pastel-icon-glow-filter:
-            drop-shadow(0 0 calc(var(--pastel-icon-glow-size) * 0.8) var(--pastel-rainbow-blue))
-            drop-shadow(1px 1px var(--pastel-icon-glow-size) var(--pastel-rainbow-pink))
-            drop-shadow(-1px 1px var(--pastel-icon-glow-size) var(--pastel-rainbow-green));
     }
 
     #app-mount :where(div, span, p, a, button, label, strong, em, code, time, h1, h2, h3, h4, h5, h6, input, textarea) {
         text-shadow: var(--pastel-text-glow);
+        animation: astrl-text-glow-shimmer var(--pastel-glow-duration) ease-in-out infinite;
+    }
+}
+
+@keyframes astrl-text-glow-shimmer {
+    0%,
+    100% {
+        text-shadow:
+            0 0 calc(var(--pastel-glow-size) * 0.65) var(--pastel-rainbow-blue),
+            1px 1px var(--pastel-glow-size) var(--pastel-rainbow-pink),
+            -1px 1px var(--pastel-glow-size) var(--pastel-rainbow-cream);
     }
 
-    #app-mount :where(svg, [class*='icon_'], [class*='Icon_'], [class*='buttonIcon_'], [class*='ButtonIcon_']) {
-        filter: var(--pastel-icon-glow-filter);
+    33% {
+        text-shadow:
+            0 0 calc(var(--pastel-glow-size) * 0.65) var(--pastel-rainbow-green),
+            1px 1px var(--pastel-glow-size) var(--pastel-rainbow-blue),
+            -1px 1px var(--pastel-glow-size) var(--pastel-rainbow-pink);
+    }
+
+    66% {
+        text-shadow:
+            0 0 calc(var(--pastel-glow-size) * 0.65) var(--pastel-rainbow-cream),
+            1px 1px var(--pastel-glow-size) var(--pastel-rainbow-green),
+            -1px 1px var(--pastel-glow-size) var(--pastel-rainbow-blue);
     }
 }
 

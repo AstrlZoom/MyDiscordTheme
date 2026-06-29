@@ -85,11 +85,11 @@ body {
     --desktop-blur-amount: 22px; /* blur applied to the transparent app background */
     --bg-floating: rgba(124, 118, 110, 0.8); /* tooltips, menus, and popouts. Higher alpha = easier to read */
 
-    /* pastel glow options */
-    --pastel-glow: on; /* off: no glow, on: subtle rainbow glow under text and icons */
-    --pastel-glow-opacity: 0.16; /* lower = softer glow, higher = brighter glow */
+    /* pastel text glow options */
+    --pastel-glow: on; /* off: no glow, on: subtle animated rainbow glow under text only */
+    --pastel-glow-opacity: 0.22; /* lower = softer glow, higher = brighter glow */
     --pastel-glow-size: 4px; /* text glow spread */
-    --pastel-icon-glow-size: 3px; /* icon glow spread */
+    --pastel-glow-duration: 9s; /* speed of the slow color shimmer */
 
     /* chatbar options */
     --custom-chatbar: off; /* off: default chatbar, separated: chatbar separated from chat */
