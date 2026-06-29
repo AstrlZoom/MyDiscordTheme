@@ -21,7 +21,7 @@ Most visual edits are in `themes/AstrlGlass Theme.theme.css`:
 - Colors: `--astrl-*`, `--accent-*`, `--bg-*`, `--text-*`
 - Spacing: `--gap`, `--divider-thickness`, `--border-thickness`
 - Roundness: `--radius-sm`, `--radius-md`, `--radius-lg`
-- Transparency: `--desktop-tint`, `--bg-floating`, `--blur-amount`
+- Transparency/glass: `--desktop-tint`, `--bg-floating`, `--blur-amount`, `--liquid-glass`, `--liquid-glass-*`
 - Background image: `--background-image`, `--background-image-url`
 - DMs icon: `--dms-icon-svg-url`, `--dms-icon-svg-size`, `--dms-icon-color-*`
 

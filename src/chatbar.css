@@ -36,10 +36,12 @@ body {
         backdrop-filter: none;
     }
     .messagesWrapper__36d07 {
-        background-color: var(--background-base-lower);
+        background: var(--panel-background);
         border-radius: var(--radius-lg);
         border: var(--border-thickness) solid var(--border-subtle);
+        -webkit-backdrop-filter: var(--panel-backdrop-filter);
         backdrop-filter: var(--panel-backdrop-filter);
+        box-shadow: var(--panel-box-shadow);
         transition: border-color var(--border-hover-transition);
         overflow: hidden;
 
@@ -85,10 +87,12 @@ body {
     }
     #app-mount .channelTextArea_f75fb0 {
         margin: 0;
-        background-color: var(--background-base-lower);
+        background: var(--panel-background);
         border-radius: var(--radius-lg);
         border: var(--border-thickness) solid var(--border-subtle);
+        -webkit-backdrop-filter: var(--panel-backdrop-filter);
         backdrop-filter: var(--panel-backdrop-filter);
+        box-shadow: var(--panel-box-shadow);
         transition: border-color var(--border-hover-transition);
 
         &:hover {
@@ -104,8 +108,10 @@ body {
         padding: 0;
         border-radius: var(--radius-lg);
         border: var(--border-thickness) solid var(--border-subtle);
-        background-color: var(--bg-4);
+        background: var(--panel-background);
+        -webkit-backdrop-filter: var(--panel-backdrop-filter);
         backdrop-filter: var(--panel-backdrop-filter);
+        box-shadow: var(--panel-box-shadow);
         transition: border-color var(--border-hover-transition);
 
         &:hover {
@@ -119,6 +125,7 @@ body {
         padding-left: 28px;
         border-width: var(--border-thickness);
         border-radius: var(--radius-lg);
-        background-color: var(--bg-4);
+        background: var(--panel-background);
+        box-shadow: var(--panel-box-shadow);
     }
 }
