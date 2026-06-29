@@ -28,7 +28,7 @@ body {
     --radius-md: 8px; /* medium corners, like buttons and embeds */
     --radius-lg: 12px; /* big panel corners */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
-    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --border-thickness: 0px; /* thickness of borders around main panels. Use 1px if you want outlines back */
 
     /* animation/transition options */
     --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
@@ -121,10 +121,10 @@ body {
     --offline: var(--text-4); /* change to #82838b for default offline color */
 
     /* border colors */
-    --border-light: var(--hover); /* general light border color */
-    --border: var(--active); /* general normal border color */
-    --border-hover: var(--active); /* border color of panels when hovered */
-    --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
+    --border-light: transparent; /* light borders around inputs and small controls */
+    --border: transparent; /* normal borders around popouts and panels */
+    --border-hover: transparent; /* panel border color when hovered */
+    --button-border: transparent; /* neutral border color of buttons */
 
     /* base colors */
     --red-1: oklch(75% 0.12 0);

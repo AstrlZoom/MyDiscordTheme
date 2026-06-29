@@ -36,7 +36,7 @@ body {
     /* sizes */
     --gap: 12px; /* spacing between panels */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
-    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --border-thickness: 0px; /* thickness of borders around main panels. Use 1px if you want outlines back */
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
 
     --border-hover-transition: 0.2s ease;
@@ -381,7 +381,7 @@ body {
     right: 12px;
     border-radius: var(--radius-sm);
     padding: 0 8px;
-    border-top: 1px solid var(--border-subtle);
+    border-top: var(--border-thickness) solid var(--border-subtle);
 }
 
 /* "This channel is not in your channel list" header */
@@ -391,7 +391,7 @@ body {
     padding-left: 16px;
     background-color: var(--bg-3);
     border-radius: var(--radius-sm);
-    border: 1px solid var(--border-subtle);
+    border: var(--border-thickness) solid var(--border-subtle);
 
     &::after {
         display: none;
@@ -497,7 +497,7 @@ body {
 }
 
 .outer_c0bea0 /* profile outer */ {
-    border: 1px solid var(--border-subtle);
+    border: var(--border-thickness) solid var(--border-subtle);
     background-position: center calc(-1 * var(--border-thickness));
     background-size: 100% calc(100% + 2 * var(--border-thickness));
 }
@@ -813,10 +813,10 @@ body {
     --offline: var(--text-4); /* change to #82838b for default offline color */
 
     /* border colors */
-    --border-light: var(--hover); /* general light border color */
-    --border: var(--active); /* general normal border color */
-    --border-hover: var(--active); /* border color of panels when hovered */
-    --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
+    --border-light: transparent; /* light borders around inputs and small controls */
+    --border: transparent; /* normal borders around popouts and panels */
+    --border-hover: transparent; /* panel border color when hovered */
+    --button-border: transparent; /* neutral border color of buttons */
 
     /* base colors */
     --red-1: oklch(75% 0.12 0);
@@ -2606,7 +2606,7 @@ body,
 #app-mount .outer_c0bea0.user-profile-popout:not(.custom-theme-background) {
     background: var(--bg-floating) !important;
     color: var(--text-1) !important;
-    border: 1px solid var(--border) !important;
+    border: none !important;
     backdrop-filter: blur(var(--desktop-blur-amount)) saturate(1.08);
 }
 
@@ -2647,7 +2647,7 @@ body {
     --radius-md: 8px; /* medium corners, like buttons and embeds */
     --radius-lg: 12px; /* big panel corners */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
-    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --border-thickness: 0px; /* thickness of borders around main panels. Use 1px if you want outlines back */
 
     /* animation/transition options */
     --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
@@ -2740,10 +2740,10 @@ body {
     --offline: var(--text-4); /* change to #82838b for default offline color */
 
     /* border colors */
-    --border-light: var(--hover); /* general light border color */
-    --border: var(--active); /* general normal border color */
-    --border-hover: var(--active); /* border color of panels when hovered */
-    --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
+    --border-light: transparent; /* light borders around inputs and small controls */
+    --border: transparent; /* normal borders around popouts and panels */
+    --border-hover: transparent; /* panel border color when hovered */
+    --button-border: transparent; /* neutral border color of buttons */
 
     /* base colors */
     --red-1: oklch(75% 0.12 0);

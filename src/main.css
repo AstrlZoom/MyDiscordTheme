@@ -19,7 +19,7 @@ body {
     /* sizes */
     --gap: 12px; /* spacing between panels */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
-    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --border-thickness: 0px; /* thickness of borders around main panels. Use 1px if you want outlines back */
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
 
     --border-hover-transition: 0.2s ease;
@@ -364,7 +364,7 @@ body {
     right: 12px;
     border-radius: var(--radius-sm);
     padding: 0 8px;
-    border-top: 1px solid var(--border-subtle);
+    border-top: var(--border-thickness) solid var(--border-subtle);
 }
 
 /* "This channel is not in your channel list" header */
@@ -374,7 +374,7 @@ body {
     padding-left: 16px;
     background-color: var(--bg-3);
     border-radius: var(--radius-sm);
-    border: 1px solid var(--border-subtle);
+    border: var(--border-thickness) solid var(--border-subtle);
 
     &::after {
         display: none;
@@ -480,7 +480,7 @@ body {
 }
 
 .outer_c0bea0 /* profile outer */ {
-    border: 1px solid var(--border-subtle);
+    border: var(--border-thickness) solid var(--border-subtle);
     background-position: center calc(-1 * var(--border-thickness));
     background-size: 100% calc(100% + 2 * var(--border-thickness));
 }
