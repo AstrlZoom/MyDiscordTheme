@@ -759,23 +759,31 @@ body {
 }
 
 :root {
+    /* AstrlGlass palette */
+    --astrl-navy: #052f5f; /* deep blue from the palette */
+    --astrl-blue: #005377; /* main blue from the palette */
+    --astrl-powder-bush: #f0b7b3; /* warm blush from the palette */
+    --astrl-cream: #fff1e8; /* softer cream used for the warm glass glow */
+    --astrl-rose: #d81159; /* bright pink accent from the palette */
+    --astrl-plum: #8f2d56; /* deep berry accent from the palette */
+
     /* text colors */
-    --text-0: var(--bg-4); /* text on colored elements */
-    --text-1: hsl(220, 45%, 95%); /* other normally white text */
-    --text-2: hsl(220, 25%, 70%); /* headings and important text */
-    --text-3: hsl(220, 20%, 60%); /* normal text */
-    --text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
-    --text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
+    --text-0: var(--astrl-navy); /* text on bright colored elements */
+    --text-1: var(--astrl-cream); /* normally white text */
+    --text-2: #f4d8d2; /* headings and important text */
+    --text-3: #d7b9ba; /* normal text */
+    --text-4: #83a7b7; /* icon buttons and channels */
+    --text-5: #5a7484; /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: hsla(220, 15%, 20%, 1); /* dark buttons when clicked */
-    --bg-2: hsla(220, 15%, 16%, 1); /* dark buttons */
-    --bg-3: hsla(220, 15%, 13%, 1); /* spacing, secondary elements */
-    --bg-4: hsla(220, 15%, 10%, 1); /* main background color */
-    --hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
-    --active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
-    --active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */
-    --message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
+    --bg-1: rgba(13, 76, 111, 0.92); /* dark buttons when clicked */
+    --bg-2: rgba(8, 62, 99, 0.86); /* dark buttons */
+    --bg-3: rgba(6, 48, 84, 0.8); /* spacing, secondary elements */
+    --bg-4: rgba(5, 47, 95, 0.74); /* main blue glass background */
+    --hover: rgba(240, 183, 179, 0.16); /* channels and buttons when hovered */
+    --active: rgba(0, 83, 119, 0.42); /* channels and buttons when clicked or selected */
+    --active-2: rgba(216, 17, 89, 0.24); /* extra state for transparent buttons */
+    --message-hover: rgba(240, 183, 179, 0.09); /* messages when hovered */
 
     /* accent colors */
     --accent-1: var(--blue-1); /* links and other accent text */
@@ -783,9 +791,9 @@ body {
     --accent-3: var(--blue-3); /* accent buttons */
     --accent-4: var(--blue-4); /* accent buttons when hovered */
     --accent-5: var(--blue-5); /* accent buttons when clicked */
-    --accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
-    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
-    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --accent-new: var(--astrl-rose); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, rgba(216, 17, 89, 0.22) 0%, rgba(240, 183, 179, 0.1) 42%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, rgba(216, 17, 89, 0.3) 0%, rgba(240, 183, 179, 0.14) 42%, transparent); /* background of messages that mention you when hovered */
     --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
     --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
@@ -803,35 +811,35 @@ body {
     --button-border: transparent; /* neutral border color of buttons */
 
     /* base colors */
-    --red-1: oklch(75% 0.12 0);
-    --red-2: oklch(70% 0.12 0);
-    --red-3: oklch(65% 0.12 0);
-    --red-4: oklch(60% 0.12 0);
-    --red-5: oklch(55% 0.12 0);
+    --red-1: #ff6f9e;
+    --red-2: #f13c7f;
+    --red-3: var(--astrl-rose);
+    --red-4: #b90f4d;
+    --red-5: var(--astrl-plum);
 
-    --green-1: oklch(75% 0.11 170);
-    --green-2: oklch(70% 0.11 170);
-    --green-3: oklch(65% 0.11 170);
-    --green-4: oklch(60% 0.11 170);
-    --green-5: oklch(55% 0.11 160);
+    --green-1: #84f2d6;
+    --green-2: #55dfc1;
+    --green-3: #2cc7a8;
+    --green-4: #1ea084;
+    --green-5: #147b67;
 
-    --blue-1: oklch(75% 0.1 215);
-    --blue-2: oklch(70% 0.1 215);
-    --blue-3: oklch(65% 0.1 215);
-    --blue-4: oklch(60% 0.1 215);
-    --blue-5: oklch(55% 0.1 215);
+    --blue-1: #9deaff;
+    --blue-2: #55d8ff;
+    --blue-3: #16afd9;
+    --blue-4: var(--astrl-blue);
+    --blue-5: var(--astrl-navy);
 
-    --yellow-1: oklch(80% 0.11 90);
-    --yellow-2: oklch(75% 0.11 90);
-    --yellow-3: oklch(70% 0.11 90);
-    --yellow-4: oklch(65% 0.11 90);
-    --yellow-5: oklch(60% 0.11 90);
+    --yellow-1: #fff6d8;
+    --yellow-2: #ffe4b8;
+    --yellow-3: var(--astrl-powder-bush);
+    --yellow-4: #cc8f8d;
+    --yellow-5: #a86f74;
 
-    --purple-1: oklch(75% 0.11 310);
-    --purple-2: oklch(70% 0.11 310);
-    --purple-3: oklch(65% 0.11 310);
-    --purple-4: oklch(60% 0.11 310);
-    --purple-5: oklch(55% 0.11 310);
+    --purple-1: #f0b7d0;
+    --purple-2: #d66b9c;
+    --purple-3: #b84275;
+    --purple-4: var(--astrl-plum);
+    --purple-5: #6e2144;
 }
 
 @container root style(--colors: on) {

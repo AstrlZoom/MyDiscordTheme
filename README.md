@@ -18,7 +18,7 @@ Enable `AstrlGlass Theme.theme.css` in Discord, then press `Ctrl+R` if Discord d
 
 Most visual edits are in `themes/AstrlGlass Theme.theme.css`:
 
-- Colors: `--accent-*`, `--bg-*`, `--text-*`
+- Colors: `--astrl-*`, `--accent-*`, `--bg-*`, `--text-*`
 - Spacing: `--gap`, `--divider-thickness`, `--border-thickness`
 - Roundness: `--radius-sm`, `--radius-md`, `--radius-lg`
 - Transparency: `--desktop-tint`, `--bg-floating`, `--blur-amount`
